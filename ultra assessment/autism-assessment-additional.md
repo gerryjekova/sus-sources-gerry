@@ -14,64 +14,144 @@ Rate how strongly you agree with each statement:
 ### Questions
 
 1. I prefer to do things with others rather than on my own.
-   - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0      
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 2. I prefer to do things the same way over and over again.
-   - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0      
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 3. If I try to imagine something, I find it very easy to create a picture in my mind.
-   - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0    
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 4. I frequently get so strongly absorbed in one thing that I lose sight of other things.
-   - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0    
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 5. I often notice small sounds when others do not.
-   - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0      
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 6. I usually notice car number plates or similar strings of information.
-   - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0      
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 7. Other people frequently tell me that what I've said is impolite, even though I think it is polite.
-   - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0      
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 8. When I'm reading a story, I can easily imagine what the characters might look like.
-   - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0      
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 9. I am fascinated by dates.
-   - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0      
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 10. In a social group, I can easily keep track of several different people's conversations.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 11. I find social situations easy.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 12. I tend to notice details that others do not.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 13. I would rather go to a library than to a party.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 14. I find making up stories easy.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 15. I find myself drawn more strongly to people than to things.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 16. I tend to have very strong interests, which I get upset about if I can't pursue.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 17. I enjoy social chitchat.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 18. When I talk, it isn't always easy for others to get a word in edgewise.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 19. I am fascinated by numbers.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 20. When I'm reading a story, I find it difficult to work out the characters' intentions.
-    - [ ] 1 [ ] 2 [ ] 3 [ ] 4
+   - [ ] 0       
+   - [ ] 1 
+   - [ ] 2 
+   - [ ] 3 
+   - [ ] 4
 
 ### Scoring
 For questions 1, 3, 8, 10, 11, 14, 15, 17: Score 1 point for responses 1 or 2
