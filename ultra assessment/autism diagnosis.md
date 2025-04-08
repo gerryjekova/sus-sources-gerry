@@ -1,24 +1,4 @@
-Skip to main content
 
-An official website of the United States government
-
-Here's how you know
-
-                                  NCBI home page  
-                                
-Search
-
-Log in  
-Primary site navigation  
-Search PMC Full-Text Archive  
-Search PMC Full-Text Archive
-
-Search in PMC  
-Advanced Search   
-Journal List   
-User Guide
-
-New  
 Try this search in PMC Beta Search  
 As a library, NLM provides access to scientific literature. Inclusion in an NLM database does not imply endorsement of, or agreement with, the contents by NLM or the National Institutes of Health.  
 Learn more: PMC Disclaimer | PMC Copyright Notice  
