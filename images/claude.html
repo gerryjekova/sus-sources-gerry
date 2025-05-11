@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практичен План за Енергиен Мениджмънт</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #34495e;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+        
+        nav {
+            background-color: var(--dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+        }
+        
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+        
+        .nav-links li a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .active {
+            background-color: var(--secondary);
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 0.75rem;
+            color: var(--secondary);
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            box-shadow: var(--box-shadow);
+            animation: fadeIn 1s ease;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+            text-align: left;
+            padding: 1rem;
+        }
+        
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f1f1f1;
+            transition: var(--transition);
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .tab-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            flex: 1;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-btn.active {
+            background-color: white;
+            border-bottom: 3px solid var(--secondary);
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 15px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary), var(--success));
+            border-radius: 10px;
+            width: 0;
+            transition: width 1s ease;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+            padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: var(--secondary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            border: 4px solid var(--secondary);
+            left: -2rem;
+            top: 5px;
+        }
+        
+        .timeline-item:hover::before {
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted var(--dark);
+        }
+        
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .badge-success {
+            background-color: var(--success);
+        }
+        
+        .badge-warning {
+            background-color: var(--warning);
+        }
+        
+        .badge-danger {
+            background-color: var(--accent);
+        }
+        
+        .collapsible {
+            background-color: #f9f9f9;
+            cursor: pointer;
+            padding: 1rem;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1rem;
+            transition: 0.4s;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .collapsible:after {
+            content: '\002B';
+            color: var(--primary);
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .active.collapsible:after {
+            content: "\2212";
+        }
+        
+        .collapsible-content {
+            padding: 0 1rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: white;
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+        }
+        
+        /* Energy level visualization */
+        .energy-chart {
+            display: flex;
+            height: 200px;
+            margin: 2rem 0;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        
+        .energy-bar {
+            flex: 1;
+            background: linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+            border-radius: 5px 5px 0 0;
+            position: relative;
+            transition: height 1s ease;
+        }
+        
+        .energy-bar::after {
+            content: attr(data-time);
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+        }
+        
+        .energy-bar::before {
+            content: attr(data-level);
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+        }
+        
+        /* Checklist styles */
+        .checklist {
+            list-style: none;
+        }
+        
+        .checklist li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .checklist li label {
+            margin-left: 0.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            flex: 1;
+        }
+        
+        .checklist li input[type="checkbox"] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .checklist li input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            color: #888;
+        }
+        
+        /* Loading animation */
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--secondary);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header class="pulse">
+        <div class="container">
+            <h1>🚀 Практичен План за Енергиен Мениджмънт: 4 Месеца</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#key-parameters" class="active">Ключови Параметри</a></li>
+            <li><a href="#daily-structure">Дневна Структура</a></li>
+            <li><a href="#supplements">Добавки</a></li>
+            <li><a href="#nutrition">Хранене</a></li>
+            <li><a href="#interventions">Интервенции</a></li>
+            <li><a href="#management">Управление</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="key-parameters">
+            <h2><i>📊</i> Ключови Параметри</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Фактор</th>
+                            <th>Реалност</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>⏰ Работен график</td>
+                            <td>14+ часа активност всеки ден</td>
+                        </tr>
+                        <tr>
+                            <td>💤 Събуждане</td>
+                            <td>8:45 (един ден седмично: 11:00)</td>
+                        </tr>
+                        <tr>
+                            <td>🔋 Енергийни пикове</td>
+                            <td>9:00-12:00 и 19:30-23:00</td>
+                        </tr>
+                        <tr>
+                            <td>📉 Критичен период</td>
+                            <td>Следобедите (висок риск от колапс)</td>
+                        </tr>
+                        <tr>
+                            <td>🍲 Храна</td>
+                            <td>Без готвене, само готови храни</td>
+                        </tr>
+                        <tr>
+                            <td>🛒 Пазаруване</td>
+                            <td>Максимум 1 посещение на супермаркет седмично</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>Визуализация на енергийните нива през деня</h3>
+            <div class="energy-chart">
+                <div class="energy-bar" style="height: 80%;" data-time="9:00" data-level="Високо"></div>
+                <div class="energy-bar" style="height: 90%;" data-time="10:00" data-level="Много високо"></div>
+                <div class="energy-bar" style="height: 85%;" data-time="11:00" data-level="Високо"></div>
+                <div class="energy-bar" style="height: 75%;" data-time="12:00" data-level="Средно-високо"></div>
+                <div class="energy-bar" style="height: 60%;" data-time="13:00" data-level="Средно"></div>
+                <div class="energy-bar" style="height: 40%;" data-time="14:00" data-level="Ниско"></div>
+                <div class="energy-bar" style="height: 30%;" data-time="15:00" data-level="Много ниско"></div>
+                <div class="energy-bar" style="height: 35%;" data-time="16:00" data-level="Ниско"></div>
+                <div class="energy-bar" style="height: 45%;" data-time="17:00" data-level="Средно-ниско"></div>
+                <div class="energy-bar" style="height: 55%;" data-time="18:00" data-level="Средно"></div>
+                <div class="energy-bar" style="height: 70%;" data-time="19:00" data-level="Средно-високо"></div>
+                <div class="energy-bar" style="height: 85%;" data-time="20:00" data-level="Високо"></div>
+                <div class="energy-bar" style="height: 90%;" data-time="21:00" data-level="Много високо"></div>
+                <div class="energy-bar" style="height: 80%;" data-time="22:00" data-level="Високо"></div>
+                <div class="energy-bar" style="height: 65%;" data-time="23:00" data-level="Средно"></div>
+            </div>
+            
+            <div class="card">
+                <h3>Измерване на енергийни нива днес</h3>
+                <p>Отбележете текущото си енергийно ниво в различни периоди от деня:</p>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="morning">Сутрин</button>
+                    <button class="tab-btn" data-tab="noon">Обяд</button>
+                    <button class="tab-btn" data-tab="afternoon">Следобед</button>
+                    <button class="tab-btn" data-tab="evening">Вечер</button>
+                </div>
+                
+                <div class="tab-content active" id="morning">
+                    <h4>Сутрешно енергийно ниво (8:45-12:00)</h4>
+                    <input type="range" min="1" max="10" value="7" class="energy-slider" id="morning-energy">
+                    <p>Текущо ниво: <span id="morning-value">7</span>/10</p>
+                </div>
+                
+                <div class="tab-content" id="noon">
+                    <h4>Обедно енергийно ниво (12:00-14:00)</h4>
+                    <input type="range" min="1" max="10" value="5" class="energy-slider" id="noon-energy">
+                    <p>Текущо ниво: <span id="noon-value">5</span>/10</p>
+                </div>
+                
+                <div class="tab-content" id="afternoon">
+                    <h4>Следобедно енергийно ниво (14:00-18:00)</h4>
+                    <input type="range" min="1" max="10" value="3" class="energy-slider" id="afternoon-energy">
+                    <p>Текущо ниво: <span id="afternoon-value">3</span>/10</p>
+                </div>
+                
+                <div class="tab-content" id="evening">
+                    <h4>Вечерно енергийно ниво (18:00-23:00)</h4>
+                    <input type="range" min="1" max="10" value="8" class="energy-slider" id="evening-energy">
+                    <p>Текущо ниво: <span id="evening-value">8</span>/10</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="daily-structure">
+            <h2><i>📅</i> Базова Дневна Структура</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>8:45 - Събуждане</h3>
+                    <p>Хидратация + излагане на дневна светлина + стрейчинг</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>9:00-12:00 - Първи пик на продуктивност <span class="badge badge-success">Високо Енергия</span></h3>
+                    <p>Основни задачи, изискващи висока концентрация и креативност</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>12:00-13:00 - Превенция на следобедния спад</h3>
+                    <p>Стратегическо хранене + хидратация + микро-движение + добавки</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>13:00-17:00 - Следобеден период <span class="badge badge-warning">Ниска Енергия</span></h3>
+                    <p>По-леки задачи + прилагане на протоколи против умора</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>17:00-19:30 - Преходен период</h3>
+                    <p>Подготовка за вечерния енергиен пик</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>19:30-23:00 - Втори пик на продуктивност <span class="badge badge-success">Високо Енергия</span></h3>
+                    <p>Втори набор от важни задачи и дейности</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Планиране на дневен график</h3>
+                <p>Използвайте тази интерактивна секция, за да планирате своя ден според енергийните си нива:</p>
+                
+                <h4>Приоритетни задачи за високо енергийните периоди:</h4>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" id="task1">
+                        <label for="task1">Задача, изискваща висока концентрация</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="task2">
+                        <label for="task2">Креативна или аналитична работа</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="task3">
+                        <label for="task3">Вземане на важни решения</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="task4">
+                        <label for="task4">Стратегическо планиране</label>
+                    </li>
+                </ul>
+                
+                <h4>Задачи за ниско енергийните периоди:</h4>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" id="low1">
+                        <label for="low1">Административни задачи</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="low2">
+                        <label for="low2">Отговаряне на по-прости имейли</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="low3">
+                        <label for="low3">Организационни дейности</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="low4">
+                        <label for="low4">Лека подготвителна работа</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="supplements">
+            <h2><i>💊</i> Високоефективни Добавки</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="daily">Базови Ежедневни Добавки</button>
+                <button class="tab-btn" data-tab="situational">Ситуативни Тактически Добавки</button>
+            </div>
+            
+            <div class="tab-content active" id="daily">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Добавка</th>
+                                <th>Дозировка</th>
+                                <th>Време</th>
+                                <th>Цел</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Мултивитамини</td>
+                                <td>Според опаковката</td>
+                                <td>Сутрин с храна</td>
+                                <td>Базово покритие</td>
+                            </tr>
+                            <tr>
+                                <td>Омега-3</td>
+                                <td>2000mg EPA/DHA</td>
+                                <td>Сутрин с храна</td>
+                                <td>Мозъчна функция</td>
+                            </tr>
+                            <tr>
+                                <td>Магнезий глицинат</td>
+                                <td>200mg</td>
+                                <td>Сутрин + вечер</td>
+                                <td>Енергия + мускулна релаксация</td>
+                            </tr>
+                            <tr>
+                                <td>B-комплекс</td>
+                                <td>Според опаковката</td>
+                                <td>Сутрин</td>
+                                <td>Клетъчен метаболизъм</td>
+                            </tr>
+                            <tr>
+                                <td>Витамин D3</td>
+                                <td>2000-4000 IU</td>
+                                <td>Сутрин</td>
+                                <td>Настроение + имунитет</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3>Проследяване на прием на добавки</h3>
+                <div class="checklist">
+                    <li>
+                        <input type="checkbox" id="supp1">
+                        <label for="supp1">Мултивитамини</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="supp2">
+                        <label for="supp2">Омега-3</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="supp3">
+                        <label for="supp3">Магнезий глицинат (сутрин)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="supp4">
+                        <label for="supp4">B-комплекс</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="supp5">
+                        <label for="supp5">Витамин D3</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="supp6">
+                        <label for="supp6">Магнезий глицинат (вечер)</label>
+                    </li>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="situational">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ситуация</th>
+                                <th>Добавка</th>
+                                <th>Дозировка</th>
+                                <th>Действие</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Сутрешен старт</td>
+                                <td>
