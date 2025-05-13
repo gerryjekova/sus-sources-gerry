@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PM Personality Test</title>
+  <title>PM Personality & Pairing Test</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>PM Personality Test</h1>
-    <div id="quiz">
-      <!-- Quiz questions injected here -->
+    <h1>PM Personality & Pairing Test</h1>
+    <div class="progress-bar">
+      <div id="progress" class="progress"></div>
     </div>
-    <div id="result" class="hidden">
+    <div id="quiz" role="region" aria-live="polite">
+      <!-- Questions injected here -->
+    </div>
+    <div id="result" class="hidden" role="region" aria-live="polite">
       <!-- Results injected here -->
+    </div>
+    <div id="scenario" class="hidden" role="region" aria-live="polite">
+      <textarea id="scenario-answer" placeholder="Enter your response (100-200 words)" rows="5"></textarea>
+      <button onclick="submitScenario()">Submit</button>
     </div>
   </div>
   <script src="js/script.js"></script>

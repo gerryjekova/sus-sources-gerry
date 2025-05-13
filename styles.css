@@ -8,18 +8,19 @@ body {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 600px;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
 h1 {
   color: #1e40af;
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 20px;
+  animation: fadeIn 1s ease-in;
 }
 
 h2 {
@@ -30,7 +31,7 @@ h2 {
 button {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
   background-color: #3b82f6;
   color: white;
@@ -38,33 +39,78 @@ button {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
   background-color: #2563eb;
+  transform: scale(1.02);
 }
 
-p {
-  font-size: 14px;
-  color: #4b5563;
+button:focus {
+  outline: 2px solid #1e40af;
+}
+
+textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 4px;
+  transition: width 0.5s ease;
 }
 
 .hidden {
   display: none;
 }
 
+.result-card {
+  background-color: #f9fafb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  animation: slideIn 0.5s ease;
+}
+
 .result-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
+  color: #1e40af;
   margin-bottom: 10px;
 }
 
 .result-tagline {
   font-style: italic;
+  color: #4b5563;
   margin-bottom: 10px;
 }
 
 .result-stats {
   font-weight: bold;
   margin: 10px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
